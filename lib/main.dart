@@ -1,22 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:neteasy_flutter/utils/route_generator.dart';
+import 'package:neteasy_flutter/tab_navigator.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
+void main() => runApp(App());
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'PAGE VIEW',
-      debugShowCheckedModeBanner: false,
-      color: Colors.white,
-      //home: WeeklyPage(),
+      title: 'wexindushu',
       theme: ThemeData(
-          accentColor: Colors.deepOrangeAccent,
-          accentTextTheme: TextTheme(body1: TextStyle(color: Colors.amber))
+        primaryColor: Colors.blue
       ),
-      initialRoute: '/',
-      onGenerateRoute: RouteGenerator.generateRoute,
+      home: TabNavigator(),
     );
   }
 }
